@@ -42,3 +42,4 @@ Thumbs.db
 # Database files
 *.sqlite
 data/
+*.bak

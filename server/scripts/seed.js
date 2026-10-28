@@ -10,6 +10,40 @@ const SeatReservation = require('../src/models/SeatReservation');
 
 const moviesData = [
   {
+    title: 'Kalki 2898 AD',
+    description:
+      'Set in a post-apocalyptic world in the year 2898 AD, a modern avatar of Vishnu descends to Earth to protect the world from evil forces led by Supreme Yaskin, aided by the immortal warrior Ashwatthama.',
+    genre: ['Sci-Fi', 'Action', 'Mythology'],
+    language: 'Hindi',
+    duration: 181,
+    rating: 8.5,
+    posterUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
+    backdropUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80',
+    cast: ['Prabhas', 'Amitabh Bachchan', 'Kamal Haasan', 'Deepika Padukone', 'Disha Patani'],
+    director: 'Nag Ashwin',
+    trailerUrl: 'https://www.youtube.com/watch?v=kQDd1AhGIHk',
+    releaseDate: new Date('2024-06-27'),
+    status: 'NOW_SHOWING',
+    isTrending: true,
+  },
+  {
+    title: 'Stree 2: Sarkate Ka Aatank',
+    description:
+      'The town of Chanderi is once again haunted by a headless entity named "Sarkata" who abducts progressive women. Vicky and his friends, along with the mysterious female spirit, unite to defeat the terrifying evil force.',
+    genre: ['Comedy', 'Horror'],
+    language: 'Hindi',
+    duration: 147,
+    rating: 8.3,
+    posterUrl: 'https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80',
+    backdropUrl: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=1600&q=80',
+    cast: ['Rajkummar Rao', 'Shraddha Kapoor', 'Pankaj Tripathi', 'Abhishek Banerjee', 'Aparshakti Khurana'],
+    director: 'Amar Kaushik',
+    trailerUrl: 'https://www.youtube.com/watch?v=KVnhefk_83w',
+    releaseDate: new Date('2024-08-15'),
+    status: 'NOW_SHOWING',
+    isTrending: true,
+  },
+  {
     title: 'Dune: Part Two',
     description:
       'Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, he endeavors to prevent a terrible future only he can foresee.',
@@ -44,6 +78,23 @@ const moviesData = [
     isTrending: true,
   },
   {
+    title: 'Jawan',
+    description:
+      'A prison warden recruits inmates to commit outrageous crimes that shed light on corruption and injustice, leading to a showdown with a ruthless arms dealer who wronged him years ago.',
+    genre: ['Action', 'Thriller'],
+    language: 'Hindi',
+    duration: 169,
+    rating: 8.2,
+    posterUrl: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
+    backdropUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
+    cast: ['Shah Rukh Khan', 'Nayanthara', 'Vijay Sethupathi', 'Deepika Padukone', 'Priyamani'],
+    director: 'Atlee',
+    trailerUrl: 'https://www.youtube.com/watch?v=COv52Qyctws',
+    releaseDate: new Date('2023-09-07'),
+    status: 'NOW_SHOWING',
+    isTrending: false,
+  },
+  {
     title: 'Interstellar',
     description:
       'When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans through a newly discovered wormhole near Saturn.',
@@ -58,58 +109,7 @@ const moviesData = [
     trailerUrl: 'https://www.youtube.com/watch?v=zSWdZVtXT7E',
     releaseDate: new Date('2014-11-07'),
     status: 'NOW_SHOWING',
-    isTrending: true,
-  },
-  {
-    title: 'Spider-Man: Across the Spider-Verse',
-    description:
-      'Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.',
-    genre: ['Animation', 'Action', 'Adventure'],
-    language: 'English',
-    duration: 140,
-    rating: 8.7,
-    posterUrl: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1600&q=80',
-    cast: ['Shameik Moore', 'Hailee Steinfeld', 'Oscar Isaac', 'Jake Johnson'],
-    director: 'Joaquim Dos Santos, Kemp Powers',
-    trailerUrl: 'https://www.youtube.com/watch?v=cqGjhVJWtEg',
-    releaseDate: new Date('2023-06-02'),
-    status: 'NOW_SHOWING',
     isTrending: false,
-  },
-  {
-    title: 'Inception',
-    description:
-      'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
-    genre: ['Action', 'Sci-Fi', 'Thriller'],
-    language: 'English',
-    duration: 148,
-    rating: 8.8,
-    posterUrl: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
-    cast: ['Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Elliot Page', 'Tom Hardy'],
-    director: 'Christopher Nolan',
-    trailerUrl: 'https://www.youtube.com/watch?v=YoHD9XEInc0',
-    releaseDate: new Date('2010-07-16'),
-    status: 'NOW_SHOWING',
-    isTrending: false,
-  },
-  {
-    title: 'The Dark Knight',
-    description:
-      'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
-    genre: ['Action', 'Crime', 'Drama'],
-    language: 'English',
-    duration: 152,
-    rating: 9.0,
-    posterUrl: 'https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=1600&q=80',
-    cast: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart', 'Michael Caine', 'Gary Oldman'],
-    director: 'Christopher Nolan',
-    trailerUrl: 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
-    releaseDate: new Date('2008-07-18'),
-    status: 'NOW_SHOWING',
-    isTrending: true,
   },
   {
     title: 'Gladiator II',
@@ -129,29 +129,29 @@ const moviesData = [
     isTrending: false,
   },
   {
-    title: 'Avatar: Fire and Ash',
+    title: 'War 2',
     description:
-      'Jake Sully and Neytiri encounter a new, aggressive volcanic clan of Na\'vi known as the "Ash People" led by Varang, exploring new conflicts across the moons of Pandora.',
-    genre: ['Action', 'Adventure', 'Fantasy'],
-    language: 'English',
-    duration: 185,
-    rating: 8.5,
-    posterUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80',
-    cast: ['Sam Worthington', 'Zoe Saldaña', 'Sigourney Weaver', 'Oona Chaplin'],
-    director: 'James Cameron',
-    trailerUrl: 'https://www.youtube.com/watch?v=d9MyW72ELq0',
-    releaseDate: new Date('2025-12-19'),
+      'Major Kabir Dhaliwal returns for an adrenaline-fueled international espionage showdown as RAW faces an unprecedented global threat in the YRF Spy Universe.',
+    genre: ['Action', 'Thriller'],
+    language: 'Hindi',
+    duration: 155,
+    rating: 8.6,
+    posterUrl: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=800&q=80',
+    backdropUrl: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1600&q=80',
+    cast: ['Hrithik Roshan', 'N. T. Rama Rao Jr.', 'Kiara Advani'],
+    director: 'Ayan Mukerji',
+    trailerUrl: 'https://www.youtube.com/watch?v=tQ0mzXRk-oM',
+    releaseDate: new Date('2025-08-14'),
     status: 'UPCOMING',
-    isTrending: false,
+    isTrending: true,
   },
 ];
 
 const cinemasData = [
   {
-    name: 'IMAX Grand Cinema - Downtown',
-    location: '450 Lexington Ave, Central District',
-    city: 'Metropolis',
+    name: 'PVR INOX Superplex - Phoenix Palladium',
+    location: '462 Senapati Bapat Marg, Lower Parel',
+    city: 'Mumbai',
     facilities: ['Laser IMAX 3D', 'Dolby Atmos 128-Channel', 'Ultra-Plush Recliners', 'Gourmet Bar'],
     screens: [
       {
@@ -171,9 +171,9 @@ const cinemasData = [
     ],
   },
   {
-    name: 'Cinepolis VIP Luxe - Silicon City',
-    location: '12 Tech Park Boulevard, Silicon Valley',
-    city: 'San Jose',
+    name: 'Cinepolis VIP Luxe - Forum South Mall',
+    location: 'Kanakapura Road, Konanakunte',
+    city: 'Bengaluru',
     facilities: ['Dolby Atmos', 'In-Seat Dining', 'Heated Recliners', 'Free Valet'],
     screens: [
       {
@@ -186,13 +186,13 @@ const cinemasData = [
     ],
   },
   {
-    name: 'PVR Superplex - Metro Mall',
-    location: 'Mall of the Stars, 8th Floor',
-    city: 'New York',
+    name: "PVR Director's Cut & Gold - Ambience Mall",
+    location: 'NH-8, Ambience Island, DLF Phase 3',
+    city: 'Delhi NCR',
     facilities: ['4K RGB Laser', 'Dolby 7.1 Surround', 'Café & Bistro', 'Wheelchair Accessible'],
     screens: [
       {
-        name: 'Screen 1 Gold',
+        name: 'Screen 1 Gold Class',
         totalSeats: 80,
         rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
         seatsPerRow: 10,
@@ -275,14 +275,28 @@ const seedDatabase = async () => {
               bookedSeats.push('B3', 'B4', 'E7', 'E8');
             }
 
-            const isPremiumScreen =
-              screen.name.toLowerCase().includes('imax') ||
+            const isIMAX = screen.name.toLowerCase().includes('imax');
+            const isVIPLuxe =
               screen.name.toLowerCase().includes('vip') ||
               screen.name.toLowerCase().includes('gold');
 
-            // Realistic Indian ticket prices in INR: ₹220-₹280 standard, ₹380-₹480 VIP
-            const standardTicketPrice = isPremiumScreen ? 280 : 220;
-            const vipTicketPrice = isPremiumScreen ? 480 : 380;
+            // Realistic Indian Multiplex Pricing Structure:
+            // Morning shows (< 12 PM): Budget friendly rates (₹160-₹290)
+            // Afternoon shows (12 PM-5 PM): Moderate rates (₹200-₹350)
+            // Prime Evening/Night (>= 5 PM): Prime rates (₹250-₹420)
+            let standardTicketPrice = 220;
+            let vipTicketPrice = 380;
+
+            if (timeSlot.hour < 12) {
+              standardTicketPrice = isIMAX ? 260 : isVIPLuxe ? 290 : 160;
+              vipTicketPrice = isIMAX ? 420 : isVIPLuxe ? 480 : 280;
+            } else if (timeSlot.hour < 17) {
+              standardTicketPrice = isIMAX ? 320 : isVIPLuxe ? 350 : 200;
+              vipTicketPrice = isIMAX ? 500 : isVIPLuxe ? 560 : 340;
+            } else {
+              standardTicketPrice = isIMAX ? 380 : isVIPLuxe ? 420 : 250;
+              vipTicketPrice = isIMAX ? 600 : isVIPLuxe ? 680 : 420;
+            }
 
             showsToInsert.push({
               movieId: movie._id,

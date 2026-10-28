@@ -87,7 +87,10 @@ const movieSchema = new mongoose.Schema(
 );
 
 // Text index for search
-movieSchema.index({ title: 'text', description: 'text', cast: 'text' });
+movieSchema.index(
+  { title: 'text', description: 'text', cast: 'text' },
+  { default_language: 'english', language_override: 'textSearchLanguage' }
+);
 
 const Movie = mongoose.model('Movie', movieSchema);
 module.exports = Movie;
