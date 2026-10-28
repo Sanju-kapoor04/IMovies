@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const DEFAULT_POSTER = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80';
 
@@ -87,7 +88,7 @@ const BookingCard = ({ booking, onViewDetails, onCancelBooking, cancelling = fal
             <div>
               <span className="small text-secondary me-2">Total Paid:</span>
               <span className="fs-5 fw-bold text-white">
-                ${booking.totalAmount ? booking.totalAmount.toFixed(2) : '0.00'}
+                {formatCurrency(booking.totalAmount || 0)}
               </span>
               <span className="badge bg-secondary bg-opacity-25 text-light ms-2 small">Demo</span>
             </div>

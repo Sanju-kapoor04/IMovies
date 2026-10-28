@@ -5,6 +5,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import EmptyState from '../components/EmptyState';
 import { bookingService } from '../services/bookingService';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -183,8 +184,16 @@ const MyBookings = () => {
                 </div>
 
                 <div className="p-3 rounded-3 bg-dark bg-opacity-75 border border-secondary border-opacity-25 small text-secondary">
-                  <i className="bi bi-info-circle text-info me-1"></i>
-                  Eligible for instant cancellation before show start time.
+                  <div className="d-flex justify-content-between align-items-center mb-1">
+                    <span>Refund Amount:</span>
+                    <strong className="text-white fs-6">
+                      {formatCurrency(cancelModalBooking.totalAmount || 0)}
+                    </strong>
+                  </div>
+                  <div className="text-muted" style={{ fontSize: '0.75rem' }}>
+                    <i className="bi bi-info-circle text-info me-1"></i>
+                    Eligible for full refund and instant seat release before show start time.
+                  </div>
                 </div>
               </div>
 

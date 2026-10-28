@@ -1,11 +1,12 @@
 import React from 'react';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const SeatLayout = ({
   layout,
   bookedSeats = [],
   selectedSeats = [],
-  ticketPrice = 14.5,
-  vipPrice = 22.0,
+  ticketPrice = 220,
+  vipPrice = 380,
   onToggleSeat,
   onProceed,
   disabled = false,
@@ -76,7 +77,7 @@ const SeatLayout = ({
                       disabled={isBooked || disabled}
                       onClick={() => onToggleSeat(seatId)}
                       className={`seat-box ${seatClass} ${isAisleGap ? 'seat-aisle-gap' : ''}`}
-                      title={`${seatId} - ${isVipRow ? 'VIP' : 'Standard'} ($${isVipRow ? vipPrice.toFixed(2) : ticketPrice.toFixed(2)})${isBooked ? ' [Booked]' : ''}`}
+                      title={`${seatId} - ${isVipRow ? 'VIP' : 'Standard'} (${formatCurrency(isVipRow ? vipPrice : ticketPrice)})${isBooked ? ' [Booked]' : ''}`}
                     >
                       {seatNum}
                     </button>
@@ -95,7 +96,7 @@ const SeatLayout = ({
       <div className="seat-legend">
         <div className="legend-item">
           <div className="legend-swatch seat-box seat-available" style={{ width: '18px', height: '18px', cursor: 'default' }}></div>
-          <span>Available (${ticketPrice.toFixed(2)})</span>
+          <span>Available ({formatCurrency(ticketPrice)})</span>
         </div>
         <div className="legend-item">
           <div className="legend-swatch seat-box seat-selected" style={{ width: '18px', height: '18px', cursor: 'default' }}></div>
@@ -107,7 +108,7 @@ const SeatLayout = ({
         </div>
         <div className="legend-item">
           <span className="badge bg-purple text-light" style={{ backgroundColor: '#8b5cf6' }}>
-            Rows {vipRows.join(', ')}: VIP (${vipPrice.toFixed(2)})
+            Rows {vipRows.join(', ')}: VIP ({formatCurrency(vipPrice)})
           </span>
         </div>
       </div>
@@ -136,7 +137,7 @@ const SeatLayout = ({
           <div className="text-end">
             <div className="small text-secondary">Total Amount</div>
             <div className="fs-4 fw-bold text-white">
-              ${totalPrice.toFixed(2)}
+              {formatCurrency(totalPrice)}
             </div>
           </div>
 

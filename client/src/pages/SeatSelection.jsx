@@ -6,6 +6,7 @@ import ErrorMessage from '../components/ErrorMessage';
 import { movieService } from '../services/movieService';
 import { bookingService } from '../services/bookingService';
 import { useAuth } from '../context/AuthContext';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const SeatSelection = () => {
   const { showId } = useParams();
@@ -226,6 +227,17 @@ const SeatSelection = () => {
                   <div className="d-flex justify-content-between py-1 text-secondary small">
                     <span>Seats:</span>
                     <strong className="text-success">{selectedSeats.join(', ')}</strong>
+                  </div>
+                  <div className="d-flex justify-content-between py-1 text-secondary small">
+                    <span>Total Amount:</span>
+                    <strong className="text-white fs-6">
+                      {formatCurrency(
+                        selectedSeats.reduce((acc, seat) => {
+                          const isVip = (showData?.layout?.vipRows || ['G', 'H']).includes(seat.charAt(0));
+                          return acc + (isVip ? (showData?.vipPrice || 380) : (showData?.ticketPrice || 220));
+                        }, 0)
+                      )}
+                    </strong>
                   </div>
                 </div>
 

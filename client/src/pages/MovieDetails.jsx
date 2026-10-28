@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { movieService } from '../services/movieService';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const DEFAULT_POSTER = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80';
 const DEFAULT_BACKDROP = 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80';
@@ -337,7 +338,7 @@ const MovieDetails = () => {
                               >
                                 <div className="fw-bold">{show.showTime}</div>
                                 <div className="small text-secondary" style={{ fontSize: '0.75rem' }}>
-                                  {show.screenName} &bull; ${show.ticketPrice.toFixed(2)}
+                                  {show.screenName} &bull; {formatCurrency(show.ticketPrice)}
                                 </div>
                               </button>
                             );
@@ -386,7 +387,7 @@ const MovieDetails = () => {
                   <div className="mb-3">
                     <span className="text-secondary small d-block">Ticket Pricing:</span>
                     <span className="text-white fw-bold">
-                      Standard: ${selectedShow.ticketPrice.toFixed(2)} | VIP: ${selectedShow.vipPrice.toFixed(2)}
+                      Standard: {formatCurrency(selectedShow.ticketPrice)} | VIP: {formatCurrency(selectedShow.vipPrice)}
                     </span>
                   </div>
 

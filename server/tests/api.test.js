@@ -81,8 +81,8 @@ beforeAll(async () => {
     showDate: futureDate.toISOString().split('T')[0],
     showTime: '06:00 PM',
     startTime: futureDate,
-    ticketPrice: 15.0,
-    vipPrice: 20.0,
+    ticketPrice: 250,
+    vipPrice: 400,
     totalSeats: 60,
     bookedSeats: ['A1', 'A2'], // Existing booked seats
     status: 'ACTIVE',

@@ -275,6 +275,15 @@ const seedDatabase = async () => {
               bookedSeats.push('B3', 'B4', 'E7', 'E8');
             }
 
+            const isPremiumScreen =
+              screen.name.toLowerCase().includes('imax') ||
+              screen.name.toLowerCase().includes('vip') ||
+              screen.name.toLowerCase().includes('gold');
+
+            // Realistic Indian ticket prices in INR: ₹220-₹280 standard, ₹380-₹480 VIP
+            const standardTicketPrice = isPremiumScreen ? 280 : 220;
+            const vipTicketPrice = isPremiumScreen ? 480 : 380;
+
             showsToInsert.push({
               movieId: movie._id,
               cinemaId: cinema._id,
@@ -282,8 +291,8 @@ const seedDatabase = async () => {
               showDate: dateString,
               showTime: timeSlot.timeStr,
               startTime: startTimestamp,
-              ticketPrice: 14.5,
-              vipPrice: 22.0,
+              ticketPrice: standardTicketPrice,
+              vipPrice: vipTicketPrice,
               totalSeats: screen.totalSeats,
               bookedSeats,
               status: 'ACTIVE',

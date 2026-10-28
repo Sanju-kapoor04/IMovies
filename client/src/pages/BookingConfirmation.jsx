@@ -3,6 +3,7 @@ import { useParams, useLocation, Link, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { bookingService } from '../services/bookingService';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const DEFAULT_POSTER = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80';
 
@@ -132,7 +133,7 @@ const BookingConfirmation = () => {
                     <div className="col-6 mt-2">
                       <div className="text-uppercase" style={{ fontSize: '0.72rem' }}>Total Amount Paid</div>
                       <div className="fw-bold text-white fs-5">
-                        ${booking.totalAmount ? booking.totalAmount.toFixed(2) : '0.00'}
+                        {formatCurrency(booking.totalAmount || 0)}
                       </div>
                     </div>
                   </div>

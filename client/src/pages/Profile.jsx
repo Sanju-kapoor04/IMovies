@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { bookingService } from '../services/bookingService';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const Profile = () => {
   const { user, logout } = useAuth();
@@ -93,7 +94,7 @@ const Profile = () => {
               <div className="col-4">
                 <div className="p-3 rounded-3 bg-black bg-opacity-40 border border-secondary border-opacity-25">
                   <div className="fs-3 fw-bold text-warning">
-                    ${loading ? '...' : stats.totalSpent.toFixed(2)}
+                    {loading ? '...' : formatCurrency(stats.totalSpent)}
                   </div>
                   <div className="text-secondary small">Total Value</div>
                 </div>

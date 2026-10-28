@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatCurrency } from '../utils/formatCurrency';
 
 const DEFAULT_POSTER = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80';
 
@@ -99,7 +100,7 @@ const TicketModal = ({ booking, onClose }) => {
                     <div className="col-6">
                       <div className="small text-secondary text-uppercase">Total Amount</div>
                       <div className="fw-bold text-white fs-5">
-                        ${booking.totalAmount ? booking.totalAmount.toFixed(2) : '0.00'}
+                        {formatCurrency(booking.totalAmount || 0)}
                       </div>
                     </div>
                   </div>
