@@ -230,8 +230,7 @@ MONGODB_URI=mongodb://127.0.0.1:27017/imovies
 JWT_SECRET=imovies_dev_secret_key_928374829104829182374981
 JWT_EXPIRES_IN=7d
 COOKIE_NAME=imovies_token
-CLIENT_URL=http://localhost:5173
-```
+
 
 #### Frontend (`client/.env`)
 ```bash
@@ -266,18 +265,7 @@ npm test
 
 ---
 
-## 🔑 Demo Accounts for Evaluators
 
-For fast evaluation, use these pre-seeded development accounts:
-
-| Role | Email | Password | Pre-seeded Activity |
-| :--- | :--- | :--- | :--- |
-| **Demo User** | `demo@imovies.com` | `Password123!` | Has an active sample booking with confirmed seats in My Bookings |
-| **Admin User** | `admin@imovies.com` | `Password123!` | System administrator privileges |
-
-*(The login page also provides convenient one-click "Demo User" and "Admin User" auto-fill buttons.)*
-
----
 
 ## 📚 REST API Reference
 
