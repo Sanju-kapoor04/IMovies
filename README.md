@@ -242,34 +242,9 @@ Ensure `client/.env` contains:
 VITE_API_BASE_URL=/api
 ```
 
-### Step 4: Seed the Database
-Populate sample movies, cinemas, screens, showtimes, and demo user accounts:
-```bash
-npm run seed
-```
-*Output will display:*
-```text
-✅ DATABASE SEEDING COMPLETED SUCCESSFULLY!
-👤 Demo User:   demo@imovies.com  / Password123!
-👑 Admin User:  admin@imovies.com / Password123!
-🎬 Movies:      8 movies loaded
-🏢 Cinemas:     3 venues
-🎟️  Shows:       72 available showtimes
-```
 
-### Step 5: Launch the Application
-Start both the backend server and frontend client concurrently:
-```bash
-npm run dev
-```
 
-- **Frontend Application**: [http://localhost:5173](http://localhost:5173)
-- **Backend API Server**: [http://localhost:5000/api](http://localhost:5000/api)
-- **API Health Check**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
 
-*(You can also run them in separate terminals with `npm run server` and `npm run client`.)*
-
----
 
 ## 🧪 Automated Testing
 
