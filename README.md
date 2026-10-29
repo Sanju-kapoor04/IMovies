@@ -338,18 +338,6 @@ The Express server is configured to automatically serve the compiled React build
 
 ---
 
-## ❓ Common Issues & Troubleshooting
-
-1. **Port 5000 or 5173 already in use**:
-   - Change `PORT=5001` in `server/.env` and update Vite's proxy target in `client/vite.config.js`.
-2. **MongoDB Connection Refused**:
-   - The application automatically falls back to an embedded in-memory MongoDB in development mode.
-   - For persistent storage, verify that local MongoDB is running (`mongod`) or provide a free MongoDB Atlas cluster connection string in `server/.env`.
-3. **CORS issues during API calls**:
-   - Verify `CLIENT_URL` in `server/.env` matches your frontend origin (default: `http://localhost:5173`).
-   - The frontend Vite proxy forwards `/api` directly to `http://localhost:5000` during development, bypassing browser CORS issues entirely.
-
----
 
 ## 📄 License & Attribution
 
