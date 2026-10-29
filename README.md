@@ -391,3 +391,5 @@ The Express server is configured to automatically serve the compiled React build
 ## 📄 License & Attribution
 
 Developed with ❤️ as a full-stack movie booking system demonstration. Free to use for educational, evaluation, and portfolio purposes.
+git ls-files client/.env server/.env client/.env.example server/.env.example
+
